@@ -4,85 +4,47 @@ AOS.init(
     }
 );
 
-document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".bannerSlider", {
-        slidesPerView: 1,
-        effect: "fade",
-        speed: 1000,
-        allowTouchMove: false,
-        disableOnInteraction: false,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-    });
+const video = document.getElementById('videoSecMn');
+const toggleBtn = document.getElementById('toggleBtn');
+const videoWrapper = document.querySelector('.video-banner-hldr');
+const videoContentBox = document.getElementById('videoContentBox');
+
+const playIcon = `
+  <svg width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 2v12l10-6-10-6z"/>
+  </svg> Play Video
+`;
+
+const pauseIcon = `
+  <svg width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6 2h3v12H6zm5 0h3v12h-3z"/>
+  </svg> Pause Video
+`;
+
+videoContentBox.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".collectionSliderBundle", {
-        effect: 'slide',
-        slidesPerView: 3,
-        spaceBetween: 20, allowTouchMove: false,
-        disableOnInteraction: false,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-    });
+video.addEventListener('play', () => {
+    toggleBtn.innerHTML = pauseIcon;
+    video.controls = true;
+    videoWrapper.classList.add('video-playing');
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".collectionSlider", {
-        effect: 'slide',
-        slidesPerView: 4,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-    });
+video.addEventListener('pause', () => {
+    toggleBtn.innerHTML = playIcon;
+    video.controls = false;
+    videoWrapper.classList.remove('video-playing');
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".prodCardSlider", {
-        effect: 'slide',
-        slidesPerView: 4,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-    });
+video.addEventListener('ended', () => {
+    toggleBtn.innerHTML = playIcon;
+    video.controls = false;
+    videoWrapper.classList.remove('video-playing');
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".womenResultSlider").forEach((slider, index) => {
-        const prevArrow = slider.parentElement.querySelector(".prev");
-        const nextArrow = slider.parentElement.querySelector(".next");
-        const wrapper = slider.querySelector(".swiper-wrapper");
-        const slides = slider.querySelectorAll(".swiper-slide");
-        const clones = parseInt(slider.dataset.cloneMultiplier, 10) || 2;
-        for (let i = 0; i < clones; i++) {
-            slides.forEach((s) => wrapper.appendChild(s.cloneNode(true)));
-        }
-        console.log(
-            `Slider #${index + 1}: total slides ${wrapper.querySelectorAll(".swiper-slide").length
-            }`
-        );
-        new Swiper(slider, {
-            direction: "horizontal",
-            loop: true,
-            speed: 1000,
-            // autoplay: { delay: 0, disableOnInteraction: false },
-            centeredSlides: true,
-            grab: true,
-            navigation: { nextEl: nextArrow, prevEl: prevArrow },
-            breakpoints: {
-                150: { slidesPerView: 1.2, spaceBetween: 20 },
-                576: { slidesPerView: 2, spaceBetween: 20 },
-                769: { slidesPerView: 3.3, spaceBetween: 20 },
-                1025: { slidesPerView: 3.9, spaceBetween: 20 },
-            },
-        });
-    });
-});
+

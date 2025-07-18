@@ -187,6 +187,7 @@ body .swiper-button-next::after {
 .mainBtn :is(a, button).lightBorderBtn {
     color: #FAF9E4;
     border: 1px solid #FAF9E4;
+    background: transparent;
 }
 
 .mainBtn :is(a, button).lightBorderBtn:before {
@@ -284,11 +285,13 @@ body .swiper-button-next::after {
 }
 
 .banCntBox {
-    max-width: 857px;
+    max-width: 910px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     z-index: 2;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .banCntBox .h1 {
@@ -410,7 +413,7 @@ body .swiper-button-next::after {
 }
 
 .imgWithCntContent .h2 {
-    max-width: 398px;
+    max-width: 430px;
     margin-bottom: 30px;
 }
 
@@ -436,11 +439,11 @@ body .swiper-button-next::after {
     object-fit: cover;
 }
 
-.imgWithCntImg img[src$=".png"],
+/* .imgWithCntImg img[src$=".png"],
 .imgWithCntImg img[src*=".png?"],
 .imgWithCntImg img[src$=".PNG"] {
     object-fit: contain;
-}
+} */
 
 /* IMAGE WITH CONTENT CSS END */
 
@@ -817,7 +820,8 @@ body .swiper-button-next::after {
 /* WOMEN RESULT SECTION CSS START */
 
 .womenResult {
-    margin: 100px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .womenResult :is(.page-width, .container) {
@@ -942,7 +946,13 @@ body .swiper-button-next::after {
 /* BLOG CARD SECTION CSS START  */
 
 .ourBlogMain {
-    margin: 100px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.ourBlogMain .container .mainBtn :is(a, button) {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ourBlogMainRow {
@@ -994,8 +1004,10 @@ body .swiper-button-next::after {
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     font-size: 22px;
+    line-height: 26px;
     text-transform: none;
     transition: all ease .4s;
+    margin-top: 5px;
     color: #000;
 }
 
@@ -1082,7 +1094,7 @@ body .swiper-button-next::after {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    place-content: space-between;
+    align-items: center;
 }
 
 .ftMnFrmCnt h3 {
@@ -1144,6 +1156,7 @@ body .swiper-button-next::after {
 .ftNsLtrForm .mainBtn button {
     border-radius: 0px;
     min-width: 150px;
+    height: 100%;
 }
 
 /* FOOTER FORM SECTION CSS END */
@@ -1294,3 +1307,167 @@ body .swiper-button-next::after {
 }
 
 /* MAIN FOOTER CSS END */
+
+
+/* INNER BANNER CSS START */
+
+.mainInnerBanner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 60px;
+}
+
+.mainInnerBanner::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 175.19%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
+
+.innerBannerRow {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.innBanCnt .h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.innBanCnt p {
+    font-size: 18px;
+    line-height: 23px;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    font-family: "DM Sans", sans-serif;
+    margin-top: 10px;
+}
+
+/* INNER BANNER CSS END */
+
+/* VIDEO BANNER SECTION CSS START */
+
+.videoBanner {
+    position: relative;
+}
+
+.videoBanner .container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    max-width: 100%;
+}
+
+.video-banner-hldr {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    cursor: pointer;
+}
+
+.video-content-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    border-radius: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 3;
+    background: #00000066;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.video-content-box .h2 {
+    color: #fff;
+}
+
+.video-content-box .mainBtn {
+    margin-top: 0px !important;
+}
+
+button#toggleBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toggle-button-video {
+    display: flex;
+    justify-content: center;
+}
+
+.toggle-button-video svg {
+    fill: currentColor;
+}
+
+.video-playing .video-content-box {
+    display: none;
+}
+
+.video-container:hover .toggle-button-video {
+    opacity: 1;
+}
+
+/* VIDEO BANNER SECTION CSS END */
+
+/*  PROMOTIONAL BANNER CSS START  */
+
+.promotionalBanner {
+    background-color: #FAFAFA;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.promBanCnt {
+    padding-top: 273px;
+    padding-bottom: 260px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: 60px;
+}
+
+.promBanCnt p {
+    font-size: 18px;
+    line-height: 23px;
+    color: #4B4B4B;
+    margin-top: 10px;
+}
+
+/*  PROMOTIONAL BANNER CSS END  */
