@@ -295,7 +295,7 @@
 
     .testiMonial {
         padding-top: 80px;
-        padding-bottom: 80px;
+        padding-bottom: 65px;
     }
 
     .testiMonialBox:has(.testiImg) .testiContent {
@@ -306,8 +306,34 @@
         gap: 20px;
     }
 
+    .testiMonialBox {
+        margin-bottom: 20px;
+    }
+
     .testiImg {
         height: 270px;
+    }
+
+    .testiContent {
+        padding: 20px 15px;
+    }
+
+    .testiCntTop p {
+        font-size: 15px;
+        line-height: 19px;
+    }
+
+    .testiCntTop {
+        margin-bottom: 15px;
+    }
+
+    .testiCntBtm {
+        padding-top: 15px;
+    }
+
+    .testiCntBtm span {
+        font-size: 16px;
+        line-height: 18px;
     }
 
     /* HOME PAGE CSS END */
@@ -751,17 +777,17 @@
     }
 
     .testiMonialRow {
+        column-count: 2;
         gap: 15px;
-        grid-template-columns: 1fr 1fr;
     }
 
-    .testiContent {
-        padding: 15px;
+    .testiMonial {
+        padding-top: 60px;
+        padding-bottom: 50px;
     }
 
-    .testiCntTop p {
+    .testiCntTop .read-toggle {
         font-size: 15px;
-        line-height: 19px;
     }
 
     /* HOME PAGE CSS END */
@@ -1248,6 +1274,68 @@
     .ftBtmLinks {
         justify-content: center;
         gap: 5px;
+    }
+
+    .testiMonial {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .testiMonialRow {
+        column-count: 1;
+        gap: 10px;
+    }
+
+    .testiImg {
+        height: 220px;
+    }
+
+    .testiMonialBox:has(.testiImg) .testiContent {
+        margin-top: 10px;
+    }
+
+    .testiContent {
+        margin: 5px;
+        padding: 15px 10px;
+    }
+
+    .rating_star {
+        --star-size: 17px;
+    }
+
+    .testiCntTop p {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 8px;
+    }
+
+    .testiCntBtm {
+        padding-top: 10px;
+    }
+
+    .testiCntTop {
+        margin-bottom: 10px;
+    }
+
+    .testiCntBtm span {
+        font-size: 15px;
+        margin-bottom: 5px;
+        line-height: 17px;
+    }
+
+    .testiCntBtm p {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .testiCntBtm span::after {
+        height: 14px;
+        width: 14px;
+        right: -21px;
+    }
+
+    .testiCntTop .read-toggle {
+        font-size: 14px;
     }
 
     /* HOME PAGE CSS END */

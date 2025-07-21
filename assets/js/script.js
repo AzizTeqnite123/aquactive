@@ -127,3 +127,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const contentBoxes = document.querySelectorAll(".testiCntTop");
+
+  contentBoxes.forEach(function (contentBox) {
+    const para = contentBox.querySelector("p");
+    requestAnimationFrame(() => {
+      const isClamped = para.scrollHeight > para.clientHeight;
+      if (isClamped) {
+        const toggleBtn = document.createElement("span");
+        toggleBtn.className = "read-toggle";
+        toggleBtn.textContent = "Read More";
+
+        contentBox.appendChild(toggleBtn);
+
+        toggleBtn.addEventListener("click", function () {
+          contentBox.classList.toggle("expanded");
+          toggleBtn.textContent = contentBox.classList.contains("expanded")
+            ? "Read Less"
+            : "Read More";
+        });
+      }
+    });
+  });
+});
+

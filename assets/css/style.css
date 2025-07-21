@@ -60,6 +60,7 @@ img {
 
 .headingHldr .h2 {
     text-align: center;
+    text-wrap: balance;
 }
 
 body .swiper-button-prev {
@@ -1723,56 +1724,53 @@ button#toggleBtn {
 
 .testiMonial {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
     background: #FAF9E4;
 }
 
 .testiMonialRow {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
-    gap: 30px;
+    column-count: 3;
+    /* display: grid; */
+    /* grid-template-columns: repeat(12, 1fr); */
+    column-gap: 30px;
+    row-gap: 30px;
 }
 
 .testiMonialBox {
+    break-inside: avoid;
     height: fit-content;
     background: #F3F3F3;
+    margin-bottom: 30px
 }
 
-.testiMonialBox:nth-of-type(7n + 1) {
-    grid-area: 1/1/span 2/span 4;
+/* .testiMonialBox:nth-of-type(7n + 1) {
+    grid-area: 1/1/span 3/span 4;
     min-height: 626px;
 }
 
 .testiMonialBox:nth-of-type(7n + 2) {
-    grid-area: 1/5/span 2/span 4;
-    min-height: 441px;
+    grid-area: 1/5/span 1/span 4;
 }
 
 .testiMonialBox:nth-of-type(7n + 3) {
-    grid-area: 1/9/span 2/span 4;
-    min-height: 626px;
+    grid-area: 1/9/span 3/span 4;
 }
 
 .testiMonialBox:nth-of-type(7n + 4) {
-    grid-area: 2/1/span 2/span 4;
-    min-height: 626px;
+    grid-area: 3/1/span 3/span 4;
 }
 
 .testiMonialBox:nth-of-type(7n + 5) {
-    grid-area: 2/5/span 1/span 4;
-    min-height: 441px;
+    grid-area: 2/5/span 2/span 4;
 }
 
 .testiMonialBox:nth-of-type(7n + 6) {
-    grid-area: 2/9/span 2/span 4;
-    min-height: 626px;
+    grid-area: 3/9/span 3/span 4;
 }
 
 .testiMonialBox:nth-of-type(7n + 7) {
-    grid-area: 3/5/span 1/span 4;
-    min-height: 441px;
-}
+    grid-area: 4/5/span 1/span 4;
+} */
 
 .testiMonialBox:has(.testiImg) .testiContent {
     margin-top: 30px;
@@ -1839,6 +1837,24 @@ button#toggleBtn {
     line-height: 21px;
     letter-spacing: 0px;
     color: #8B8B8B;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.testiCntTop.expanded p {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+
+.testiCntTop .read-toggle {
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    color: #000;
 }
 
 .testiCntBtm {
