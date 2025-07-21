@@ -1,3 +1,25 @@
+@media only screen and (max-width : 1300px) {
+    /* GLOBAL STYLING */
+
+    body .swiper-button-next {
+        right: 20px;
+    }
+
+    body .swiper-button-prev {
+        left: 20px;
+    }
+
+    .prodCardSec .prodCardRow .swiper-button-next {
+        right: -15px;
+    }
+
+    .prodCardSec .prodCardRow .swiper-button-prev {
+        left: -15px;
+    }
+
+    /* GLOBAL STYLING */
+}
+
 @media only screen and (max-width : 1024px) {
 
     /* GLOBAL STYLING */
@@ -90,7 +112,7 @@
         margin-bottom: 20px;
     }
 
-    .imgWithCntContent p {
+    .imgWithCntContent :is(p, ul li) {
         font-size: 16px;
         line-height: 21px;
         margin-top: 15px;
@@ -271,6 +293,23 @@
         padding-bottom: 20px;
     }
 
+    .testiMonial {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .testiMonialBox:has(.testiImg) .testiContent {
+        margin-top: 20px;
+    }
+
+    .testiMonialRow {
+        gap: 20px;
+    }
+
+    .testiImg {
+        height: 270px;
+    }
+
     /* HOME PAGE CSS END */
 
     /* INNER BANNER CSS START */
@@ -309,6 +348,74 @@
     }
 
     /* ABOUT PAGE CSS END */
+
+    /* CUSTOM PROD PAGE SECTION CSS START */
+
+    .prod-tab-sec {
+        margin-top: 80px;
+    }
+
+    .tabProd {
+        font-size: 23px;
+        line-height: 23px;
+        margin-right: 20px;
+        padding-bottom: 15px;
+    }
+
+    .tab-prod-content {
+        padding-top: 30px;
+    }
+
+    .imgWithCntMn.remBg {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .imgWithCntMn.lrgeImg .imgWithCntRow {
+        grid-template-columns: 1.3fr 1fr;
+    }
+
+    .imgWithCntMn.lrgeImg .imgWithCntImg {
+        height: 550px;
+    }
+
+    .tab-prod-content p,
+    .tab-prod-content ul li {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .faqMainSec {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .faqMainRow {
+        gap: 20px;
+    }
+
+    .faqMainRow .accordion-item-header h5 {
+        font-size: 23px;
+        line-height: 27px;
+    }
+
+    .faqMainRow .accordion-item-header,
+    .faqMainRow .accordion-item-body-content {
+        padding: 25px;
+    }
+
+    .faqMainRow .accordion-item-header::after {
+        height: 30px;
+        width: 30px;
+        right: 25px;
+    }
+
+    .faqMainRow .accordion-item-body-content p {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    /* CUSTOM PROD PAGE SECTION CSS END */
 
 }
 
@@ -408,7 +515,7 @@
         padding-bottom: 60px;
     }
 
-    .imgWithCntContent p {
+    .imgWithCntContent :is(p, ul li) {
         font-size: 15px;
         line-height: 20px;
         margin-top: 10px;
@@ -457,13 +564,13 @@
     }
 
     .prodCardSec .prodCardRow .swiper-button-next {
-        right: -15px;
+        right: -10px;
         height: 30px;
         width: 30px;
     }
 
     .prodCardSec .prodCardRow .swiper-button-prev {
-        left: -15px;
+        left: -10px;
         height: 30px;
         width: 30px;
     }
@@ -493,6 +600,11 @@
 
     .product-card-wrapper .card__content .card__information .mainBtn {
         margin-top: 15px;
+    }
+
+    .prod-size-selector-hldr {
+        transform: unset;
+        opacity: 1;
     }
 
     .womenResult {
@@ -638,6 +750,20 @@
         flex-direction: column;
     }
 
+    .testiMonialRow {
+        gap: 15px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .testiContent {
+        padding: 15px;
+    }
+
+    .testiCntTop p {
+        font-size: 15px;
+        line-height: 19px;
+    }
+
     /* HOME PAGE CSS END */
 
     /* INNER BANNER CSS START */
@@ -665,6 +791,64 @@
     }
 
     /* ABOUT PAGE CSS END */
+
+    /* CUSTOM PROD PAGE SECTION CSS START */
+
+    .prod-tab-sec {
+        margin-top: 60px;
+    }
+
+    .tabProd {
+        font-size: 20px;
+        line-height: 20px;
+        margin-right: 20px;
+        padding-bottom: 15px;
+    }
+
+    .tab-prod-content ul {
+        margin-top: 15px;
+    }
+
+    .imgWithCntMn.remBg {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .imgWithCntMn.lrgeImg .imgWithCntRow {
+        grid-template-columns: 1.2fr 1fr;
+    }
+
+    .imgWithCntMn.lrgeImg .imgWithCntImg {
+        height: 430px;
+    }
+
+    .faqMainSec {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .faqMainRow .accordion-item-header,
+    .faqMainRow .accordion-item-body-content {
+        padding: 20px;
+    }
+
+    .faqMainRow .accordion-item-header h5 {
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .faqMainRow {
+        gap: 15px;
+    }
+
+    .faqMainRow .accordion-item-header::after {
+        right: 20px;
+        height: 27px;
+        width: 27px;
+        background-size: 12px;
+    }
+
+    /* CUSTOM PROD PAGE SECTION CSS END */
 
 }
 
@@ -796,7 +980,7 @@
         margin-bottom: 10px;
     }
 
-    .imgWithCntContent p {
+    .imgWithCntContent :is(p, ul li) {
         font-size: 14px;
         line-height: 18px;
         margin-top: 10px;
@@ -1102,4 +1286,83 @@
     }
 
     /* ABOUT PAGE CSS END */
+
+    /* CUSTOM PROD PAGE SECTION CSS START */
+
+    .prod-tab-sec {
+        margin-top: 40px;
+    }
+
+    .tabProd {
+        font-size: 18px;
+        line-height: 18px;
+        margin-right: 15px;
+        padding-bottom: 10px;
+    }
+
+    .tab-prod-content {
+        padding-top: 20px;
+    }
+
+    .tab-prod-content p,
+    .tab-prod-content ul li {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .tab-prod-content ul {
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+
+    .tab-prod-content ul li {
+        margin-bottom: 7px;
+    }
+
+    .imgWithCntMn.lrgeImg .imgWithCntRow {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .imgWithCntMn.remBg {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .imgWithCntMn.lrgeImg .imgWithCntImg {
+        height: 300px;
+    }
+
+    .imgWithCntContent ul {
+        margin-top: 15px;
+    }
+
+    .faqMainSec {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .faqMainRow .accordion-item-header,
+    .faqMainRow .accordion-item-body-content {
+        padding: 15px;
+    }
+
+    .faqMainRow .accordion-item-header h5 {
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .faqMainRow .accordion-item-header::after {
+        right: 15px;
+        height: 22px;
+        width: 22px;
+        background-size: 10px;
+    }
+
+    .faqMainRow .accordion-item-body-content p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    /* CUSTOM PROD PAGE SECTION CSS END */
+
 }
